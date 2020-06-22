@@ -1,4 +1,0 @@
-1. install system
-1.1. install via composer iscms/core
-1.2. or download manually and copy in you project folder /vendor/iscms/
-2. launch in browser youproject.site/vendor/iscms/core/install

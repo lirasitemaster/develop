@@ -16,8 +16,8 @@ We want to do everything possible to make life easier for developers. And your h
 # Project's links
 
 * [Official Instagram](https://instagram.com/isengine);
+* [Сommunity in social networks](https://facebook.com/groups/isengine);
 * [Old project on Github](https://github.com/fwmakc/iscms);
-* [Old community in social networks](https://facebook.com/groups/iscms);
 * [Old wiki](http://iscms.fwmakc.ru/).
 
 # Install
