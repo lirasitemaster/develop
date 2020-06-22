@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 /* ФУНКЦИЯ ЗАГРУЗКИ СТРАНИЦЫ ШАБЛОНА */
 
@@ -378,7 +378,7 @@ function module($arr, $special = null){
 		$arr[4] = PATH_MODULES . $arr[0][1] . DS;
 		$arr[0] = $arr[0][0];
 	} else {
-		$arr[4] = PATH_MODULES . 'iscms' . DS;
+		$arr[4] = PATH_MODULES . 'isengine' . DS;
 	}
 	
 	if (empty($arr[1])) { $arr[1] = 'default'; }

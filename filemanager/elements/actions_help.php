@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <div class="card mb-2">
 	<h6 class="card-header">

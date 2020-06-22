@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 $robots = "# For more information about the robots.txt standard, see:
 # http://www.robotstxt.org/orig.html

@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // разные варианты помещения контента в топ
 

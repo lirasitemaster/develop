@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <div
 	id="map_<?= $module -> param; ?>"

@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // инициализируем функции по работе с базой данных
 // сначала идут функции чтения

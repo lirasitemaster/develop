@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // выполняем обрезание до нужного числа
 if (!empty($module -> settings -> limit)) {

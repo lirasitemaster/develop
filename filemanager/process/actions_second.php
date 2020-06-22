@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // upload form
 if (!empty($request['get']['upload']) && !FM_READONLY) {

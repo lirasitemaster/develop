@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 foreach ($module -> var['base']['fields'] as $fi) {
 	echo $fi;

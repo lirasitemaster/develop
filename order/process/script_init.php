@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <script>
 
 /* настройки календаря для выбора даты */

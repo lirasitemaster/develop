@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 $folder = PATH_ASSETS . 'modules' . DS . $module -> name . DS . 'temporary' . DS;
 $file = $folder . datadatetime('', $module -> settings['savestate']) . '.' . $module -> param . '.ini';

@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!function_exists('funcModuleMenu_Custom')) {
 	function funcModuleMenu_Custom($structure, $settings, &$result) {

@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if ($module -> settings['type'] === 'social') { 
 	$data = lang('social');

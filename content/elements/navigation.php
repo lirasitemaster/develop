@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // вы можете вызвать этот элемент в любом месте шаблона
 // для этого достаточно переназначить настройки module -> settings['navigation']

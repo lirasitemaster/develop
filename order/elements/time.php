@@ -1,4 +1,4 @@
-﻿<?php defined('isCMS') or die; ?>
+﻿<?php defined('isENGINE') or die; ?>
 
 <?php if (!isset($module -> settings -> time -> type) || $module -> settings -> time -> type === 'auto') : ?>
 

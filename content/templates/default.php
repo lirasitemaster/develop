@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 //print_r($template -> router);
 //print_r($module -> settings -> filter);

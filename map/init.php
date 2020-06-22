@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // если нет ключа, пробуем взять ключ из СЕО
 

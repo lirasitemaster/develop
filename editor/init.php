@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // СКОРЕЕ ВСЕГО НАДО БУДЕТ ЗАМЕНИТЬ array_merge В ДРАЙВЕРЕ В ЗАПИСИ НА array_replace
 

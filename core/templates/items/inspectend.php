@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 global $loadingPage;
 global $loadingLog;
@@ -32,7 +32,7 @@ global $loadingMemory;
 			"this page was loaded in " + Math.round( ( <?= round($loadingStart - $_SERVER['REQUEST_TIME_FLOAT'], 3); ?> + Math.round(loadingPage - loadingStart) / 1000 ) * 1000 ) / 1000 + " sec\n" +
 			"... <?= round($loadingStart - $_SERVER['REQUEST_TIME_FLOAT'], 3); ?> sec [php timestamp js] " + (Math.round(loadingStart) / 1000) + " sec ...\n\n" +
 			"this page size is " + (Math.round($('html').html().length / 1024)) + " Kb" +
-			"<?php if (in('options', 'inspect')) { echo '\n\nisCMS version ' . isCMS . '\n\n' .
+			"<?php if (in('options', 'inspect')) { echo '\n\nisENGINE version ' . isENGINE . '\n\n' .
 				$loadingLog . '\n' .
 				objectToString(in('options'), ' option is enable,\n') . ' option is enable\n\n' .
 				'current site: ' . $url -> host . '\n' .

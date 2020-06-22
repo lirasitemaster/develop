@@ -1,12 +1,12 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // работа данной константы достаточно относительна,
 // т.к. она будет корректно работать только при переинициализации страницы
 
-if (cookie('isCMS', true)) {
+if (cookie('isENGINE', true)) {
 	define('isCOOKIE', true);
 } else {
-	cookie('isCMS', 'enabled');
+	cookie('isENGINE', 'enabled');
 	define('isCOOKIE', false);
 }
 

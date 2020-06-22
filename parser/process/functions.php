@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!function_exists('url_get_contents')) {
 	function url_get_contents($url, $useragent='cURL', $headers=false, $follow_redirects=true, $debug=false) {

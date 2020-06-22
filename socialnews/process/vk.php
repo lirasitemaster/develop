@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (isset($module -> settings['disable'])) {
 	$module -> settings['disable'] = json_decode( json_encode($module -> settings['disable']), true );

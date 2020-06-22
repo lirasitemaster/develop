@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // НУЖНО ОПРЕДЕЛИТЬ РАЗДЕЛ НАСТРОЕК С ПРЕДОПРЕДЕЛЕННЫМИ ПОЛЯМИ
 // ИЛИ ДОБАВЛЯТЬ ЭТИ ПОЛЯ В ФОРМУ
@@ -58,7 +58,7 @@ if (
 // new code -= vvv =-
 
 $module -> var['base'] = objectProcess(
-	!empty($module -> settings['process']) ? $module -> settings['process'] : 'form.iscms:submit',
+	!empty($module -> settings['process']) ? $module -> settings['process'] : 'form.isengine:submit',
 	!empty($module -> settings['time']) && is_numeric($module -> settings['time']) ? $module -> settings['time'] : null
 );
 

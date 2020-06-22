@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <div class="media-<?= $name . set($id, ' id-' . $id); ?>">
 	<?php

@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <?= (!empty($labels['complete'])) ? $labels['complete'] : ''; ?>
 <?php if (!empty($labels['refresh'])) : ?>

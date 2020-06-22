@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <div class="<?= $module -> settings['empty']['classes']['common']; ?>">
 	<p class="<?= $module -> settings['empty']['classes']['label']; ?>">

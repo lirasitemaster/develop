@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <!-- Scroll to Top Button-->
 <?= '<' . $module -> settings -> element . ' class="' . $module -> var['classes'] . '"' . ($module -> settings -> element === 'a' ? ' href="#"' : '') . (!empty($module -> settings -> id) ? ' id="' . $module -> settings -> id . '"' : '') . '>'; ?>

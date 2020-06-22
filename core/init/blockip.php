@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!file_exists(PATH_SITE . SECURE_BLOCKIP . '.ini')) {
 	error('blockip', false, true);

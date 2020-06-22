@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 $form = objectProcess('content:form', null, str_replace('.', ':', $content -> parent));
 ?>
 

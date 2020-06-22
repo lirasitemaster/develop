@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 $url = 'http://www.cbr.ru/scripts/XML_daily.asp';
 $module -> data = [];

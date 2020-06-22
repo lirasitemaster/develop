@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // не хватает:
 // мин-макс числа символов
@@ -86,7 +86,7 @@ if (objectIs($module -> settings)) {
 }
 
 if (empty($module -> settings)) {
-	$module -> settings = localFile(PATH_MODULES . 'iscms' . DS . 'form' . DS . 'data' . DS . $process -> source['module'] . '.ini');
+	$module -> settings = localFile(PATH_MODULES . 'isengine' . DS . 'form' . DS . 'data' . DS . $process -> source['module'] . '.ini');
 	if (!empty($module -> settings)) {
 		$module -> settings = iniPrepareJson($module -> settings, true);
 	}
@@ -114,7 +114,7 @@ if (!empty($module -> settings['captcha']['enable'])) {
 // теперь начинаем эти данные песочить
 // проверка на валидность
 
-require PATH_MODULES . 'iscms' . DS . 'form' . DS . 'process' . DS . 'functions.php';
+require PATH_MODULES . 'isengine' . DS . 'form' . DS . 'process' . DS . 'functions.php';
 
 foreach($module -> settings['form'] as $item) {
 	

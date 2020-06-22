@@ -1,4 +1,4 @@
-﻿<?php defined('isCMS') or die; ?>
+﻿<?php defined('isENGINE') or die; ?>
 
 <?php require_once $module -> elements . 'opening.php'; ?>
 <?php require_once $module -> elements . 'hidden.php'; ?>

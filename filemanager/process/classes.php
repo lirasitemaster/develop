@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 /**
  * Class to work with zip files (using ZipArchive)

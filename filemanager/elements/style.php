@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <style>
 	body { font-size:14px;color:#222;background:#F7F7F7; }
 	body.navbar-fixed { margin-top:55px; }

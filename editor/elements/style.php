@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <?php if (!empty($sets['simple'])) : ?>
 <style>
 #editModal table {

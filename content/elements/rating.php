@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 //$rating = $content -> ratings[$key]['data'];
 //$rating = $content -> ratings[$key];

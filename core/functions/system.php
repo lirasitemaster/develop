@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 /*
 clear		< dataclear - Функция которая производит очистку данных по заданному параметру
@@ -202,7 +202,7 @@ function errorlist($code){
 		case '503' : $type = 'Service Unavailable'; break;
 		case '504' : $type = 'Gateway Timeout'; break;
 		case '505' : $type = 'HTTP Version Not Supported'; break;
-		case 'php'       : $error = 'Your host needs to use PHP ' . CMS_MINIMUM_PHP . ' or higher to run this version of isCMS'; break;
+		case 'php'       : $error = 'Your host needs to use PHP ' . CMS_MINIMUM_PHP . ' or higher to run this version of isENGINE'; break;
 		case 'blockip'   : $error = 'Blocking for ip is set, but blacklist or whitelist not found'; break;
 		case 'update'    : $error = 'The site is undergoing technical work. Come back later'; break;
 		case 'system'    : $error = 'One or more of system components not defined or not found'; break;

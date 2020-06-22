@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // задаем базовые данные
 $module -> var['path'] = $module -> path . DS . 'data' . DS . $module -> param;

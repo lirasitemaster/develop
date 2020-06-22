@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 	
 	if (!empty($module -> settings['separator']) && $element['level'] == 1) {
 		if ($first) {

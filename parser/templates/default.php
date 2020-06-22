@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 echo '<section id="tripadvisor" style="margin-top: 300px; overflow: auto;"><pre>';
 echo htmlentities(print_r($module -> data, true));

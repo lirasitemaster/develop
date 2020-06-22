@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <div class="<?= $module -> settings['top']['classes']['common']; ?>">
 <?php foreach ($module -> data['top'] as $topkey => $topitem) : ?>

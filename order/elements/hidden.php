@@ -1,4 +1,4 @@
-﻿<?php defined('isCMS') or die; ?>
+﻿<?php defined('isENGINE') or die; ?>
 
 <input type="hidden" name="query" value="order">
 <input type="hidden" name="name" value="<?= $module -> param; ?>">

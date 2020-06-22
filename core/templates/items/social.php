@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <?php
 	foreach ($lang -> social as $key => $item) :
 	if ( (is_string($item) && $item) || (is_array($item) && $item[0])) :

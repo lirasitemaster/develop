@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!(DEFAULT_MODE === 'develop' && SECURE_BLOCKIP === 'developlist')) {
 	return false;

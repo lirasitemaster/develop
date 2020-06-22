@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 global $seo;
 ?><!DOCTYPE html>
 <html lang="<?= thislang('lang'); ?>"<?php if (objectIs($seo -> options) && in_array('opengraph', $seo -> options)) : ?> prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# <?= objectGet('content', 'name') ? 'article: http://ogp.me/ns/article# ' : ''; ?>ya: http://webmaster.yandex.ru/vocabularies/"<?php endif;?>>

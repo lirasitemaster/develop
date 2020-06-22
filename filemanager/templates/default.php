@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 //--- FILEMANAGER MAIN
 require $module -> elements . 'header.php'; // HEADER

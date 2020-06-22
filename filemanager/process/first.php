@@ -1,7 +1,7 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 /*
-* ISCMS File Manager
+* isENGINE File Manager
 * based on
 * H3K | Tiny File Manager V2.4.3
 * CCP Programmers | ccpprogrammers@gmail.com

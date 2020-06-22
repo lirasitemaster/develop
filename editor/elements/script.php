@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 // https://github.com/json-editor/json-editor
 // https://json-editor.github.io/json-editor/

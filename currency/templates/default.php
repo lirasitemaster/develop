@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!empty($module -> data)) :
 	foreach ($module -> data as $key => $item) :

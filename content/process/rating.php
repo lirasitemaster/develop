@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 $content -> ratingPrepare(array_keys($content -> data));
 

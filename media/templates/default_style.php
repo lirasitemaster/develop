@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <style type="text/css">
 
 .<?= $prefix; ?>mainslider,

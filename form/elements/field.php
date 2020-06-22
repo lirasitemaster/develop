@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <?php if (!empty($item['row']) && $item['row'] !== 'close') : ?>
 <div class="<?= $item['row'] === true || $item['row'] === 'open' ? 'row' : $item['row']; ?>">

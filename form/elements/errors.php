@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 
 <?php if (!empty($module -> var['errors'])) : ?>
 	<div class="

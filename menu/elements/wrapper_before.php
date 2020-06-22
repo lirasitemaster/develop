@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die; ?>
+<?php defined('isENGINE') or die; ?>
 <div class="<?= $defaults['classwrapper'] . ' ' . $defaults['classwrapperbefore']; ?>">
 <a
 	href="<?= $url -> site; ?>"

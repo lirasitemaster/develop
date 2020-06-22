@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (defined('isPROCESS')) {
 	error('403', false, 'is hack attempt to change system constant isPROCESS');
@@ -59,7 +59,7 @@ if (
 	
 	$pp = dataSplit($process -> set -> parent, '.');
 	$process -> set -> parent = $pp[0];
-	$process -> set -> vendor = !empty($pp[1]) ? $pp[1] : 'iscms';
+	$process -> set -> vendor = !empty($pp[1]) ? $pp[1] : 'isengine';
 	
 	unset($temp, $path, $pp);
 	
@@ -70,7 +70,7 @@ if (
 		error('403', true, 'process was called without name or parent');
 	} else {
 		
-		$processdb = dbUse('processor:' . $process -> set -> name, 'select', ['allow' => 'parent:' . $process -> set -> parent . ($process -> set -> vendor !== 'iscms' ? ' type:module.' . $process -> set -> vendor : null), 'return' => 'alone']);
+		$processdb = dbUse('processor:' . $process -> set -> name, 'select', ['allow' => 'parent:' . $process -> set -> parent . ($process -> set -> vendor !== 'isengine' ? ' type:module.' . $process -> set -> vendor : null), 'return' => 'alone']);
 		
 		//$processdb = dbUse('processor:' . $process -> set -> name, 'select', ['allow' => 'parent:' . $process -> set -> parent, 'return' => 'alone']);
 		//print_r($processdb);

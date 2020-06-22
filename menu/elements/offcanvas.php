@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 if (!in('libraries', 'jquery')) {
 	logging('module \'menu\' was not opening - not find needed library \'jquery\' by \'system\'');

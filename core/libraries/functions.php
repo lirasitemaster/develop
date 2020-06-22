@@ -1,4 +1,4 @@
-<?php defined('isCMS') or die;
+<?php defined('isENGINE') or die;
 
 function funcLibraries_Version($path, $need = null) {
 	
