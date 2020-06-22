@@ -1,0 +1,1 @@
+<?php defined('isCMS') or die; ?>

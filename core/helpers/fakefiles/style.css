@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.hidden {
+	display: none;
+}
+
+h3 {
+	margin: 50px auto;
+	padding: 0;
+}
+
+table tr td select {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding-left: 6px;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+	display: none;
+}
+table tr:last-child,
+table tr:last-child td select {
+	background: #eee;
+}
+
+.table-bordered>tbody>tr>td {
+    vertical-align: middle;
+}
+
+.table-bordered>tbody>tr>th {
+	background: #eee;
+}
+.table-bordered>tbody>tr>td[contenteditable="true"] {
+	background: #f7e9d4;
+}
+.table-bordered>tbody>tr>td#city,
+.table-bordered>tbody>tr>td#status,
+.table-bordered>tbody>tr>td.city,
+.table-bordered>tbody>tr>td.status {
+	position: relative;
+}
+
+.table-bordered>tbody>tr>td.images img {
+    max-width: 100%;
+}
+
+.image {
+    width: 150px;
+    height: 100px;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.insertimage {
+	display: flex;
+}
+.insertimage input {
+	display: block;
+	margin: 10px 0;
+    padding: 0px;
+    font-size: 12px;
+}
+.insertimage input[type=file] {
+	width: 72%;
+}
+.insertimage input[type=submit] {
+	width: 28%;
+	line-height: 12px;
+}
+
+#filter {
+	margin: 20px;
+}
+#filter button {
+	margin-right: 10px;
+}
+
+.filter  {
+	padding: 7px;
+    vertical-align: top;
+}
