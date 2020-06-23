@@ -14,7 +14,7 @@ $template = (object) [
 	'path' => (object) [
 		//'array' => [],
 		'init' => PATH_TEMPLATES,
-		//'url' => $uri -> site . URL_TEMPLATES,
+		//'url' => URL_TEMPLATES,
 		// нужно ли здесь определять языки? тогда нужно $uri -> site . $uri -> path -> base . URL_TEMPLATES
 		// это $template -> path -> url
 		// похоже, нет, потому что этот урл будет использоваться для загрузки локальных файлов шаблона

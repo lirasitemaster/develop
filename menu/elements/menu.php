@@ -62,8 +62,8 @@ if ($module -> settings['elements']['body']) {
 // BEFORE
 
 if ($module -> settings['elements']['before']) {
-	if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['before'] . '.php')) {
-		require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['before'] . '.php';
+	if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['before'] . '.php')) {
+		require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['before'] . '.php';
 	} else {
 		require $module -> path . 'templates' . DS . $module -> settings['elements']['before'] . '.php';
 	}
@@ -135,8 +135,8 @@ if (
 // BEFOREITEMS
 
 if ($module -> settings['elements']['beforeitems']) {
-	if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['beforeitems'] . '.php')) {
-		require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['beforeitems'] . '.php';
+	if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['beforeitems'] . '.php')) {
+		require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['beforeitems'] . '.php';
 	} else {
 		require $module -> path . 'templates' . DS . $module -> settings['elements']['beforeitems'] . '.php';
 	}
@@ -149,8 +149,8 @@ funcModuleMenu_Create($data, $module);
 // AFTERITEMS
 
 if ($module -> settings['elements']['afteritems']) {
-	if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['afteritems'] . '.php')) {
-		require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['afteritems'] . '.php';
+	if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['afteritems'] . '.php')) {
+		require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['afteritems'] . '.php';
 	} else {
 		require $module -> path . 'templates' . DS . $module -> settings['elements']['afteritems'] . '.php';
 	}
@@ -166,8 +166,8 @@ unset($module -> var['menu']['ul']);
 // AFTER
 
 if ($module -> settings['elements']['after']) {
-	if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['after'] . '.php')) {
-		require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['after'] . '.php';
+	if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['after'] . '.php')) {
+		require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> settings['elements']['after'] . '.php';
 	} else {
 		require $module -> path . 'templates' . DS . $module -> settings['elements']['after'] . '.php';
 	}

@@ -4,6 +4,7 @@ global $libraries;
 
 if (
 	!in('libraries', 'less') &&
+	!in('libraries', 'less.php') &&
 	!in('libraries', 'lessjs:system')
 ) {
 	return;
@@ -11,6 +12,7 @@ if (
 
 // вводим доп.функцию для общей обработки файла less
 if (DEFAULT_MODE === 'develop') {
+	
 	function func_less($name) {
 		
 		$path = PATH_ASSETS . 'less' . DS;
@@ -26,6 +28,30 @@ if (DEFAULT_MODE === 'develop') {
 		if (in('libraries', 'lessjs:system')) {
 			
 			return 'less';
+			
+		} elseif (in('libraries', 'less.php:wikimedia')) {
+			
+			if (!file_exists($path . $name . '.md5')) {
+				$md5 = 0;
+			} else {
+				$md5 = file_get_contents($path . $name . '.md5');
+			}
+			
+			if (
+				md5_file($path . $name . '.less') !== $md5 &&
+				filesize($path . $name . '.less') > 0
+			) {
+				
+				$less = new Less_Parser(['compress' => true]);
+				$less->parseFile($path . $name . '.less', URL_ASSETS . 'less/');
+				$less = $less->getCss();
+				file_put_contents($path . $name . '.css', $less);
+				file_put_contents($path . $name . '.md5', md5_file($path . $name . '.less'));
+				unset($less);
+				
+			}
+			
+			return 'compiled';
 			
 		} else {
 			
@@ -84,9 +110,9 @@ foreach ($places as $place) {
 				}
 			}
 			if ($result === 'less') {
-				$print .= $link['less'][0] . $uri -> site . URL_ASSETS . 'less/' . $item . '.less' . $prefix . $link['less'][1];
+				$print .= $link['less'][0] . URL_ASSETS . 'less/' . $item . '.less' . $prefix . $link['less'][1];
 			} else {
-				$print .= $link['css'][0] . $uri -> site . URL_ASSETS . 'less/' . $item . '.css' . $prefix . $link['css'][1];
+				$print .= $link['css'][0] . URL_ASSETS . 'less/' . $item . '.css' . $prefix . $link['css'][1];
 			}
 		}
 		
@@ -112,9 +138,9 @@ if (DEFAULT_MODE === 'develop') {
 }
 
 if ($result === 'compiled' && file_exists(PATH_ASSETS . 'less' . DS . 'inner' . DS . $inner . '.css')) {
-	$print .= $link['css'][0] . $uri -> site . URL_ASSETS . 'less/inner/' . $inner . '.css' . $prefix . $link['css'][1];
+	$print .= $link['css'][0] . URL_ASSETS . 'less/inner/' . $inner . '.css' . $prefix . $link['css'][1];
 } elseif ($result === 'less' && file_exists(PATH_ASSETS . 'less' . DS . 'inner' . DS . $inner . '.less')) {
-	$print .= $link['less'][0] . $uri -> site . URL_ASSETS . 'less/inner/' . $inner . '.less' . $prefix . $link['less'][1];
+	$print .= $link['less'][0] . URL_ASSETS . 'less/inner/' . $inner . '.less' . $prefix . $link['less'][1];
 }
 
 echo $print;

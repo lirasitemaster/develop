@@ -350,7 +350,7 @@ function dataImage($data, $customset = null) {
 				
 				if (file_exists($file)) {
 					$preg = $set['wrapper'][0] . '<img
-						src="/' . URL_LOCAL . str_replace([':', '.'], '/', $set['folder']) . '/' . $i . '.jpg' . 
+						src="' . URL_LOCAL . str_replace([':', '.'], '/', $set['folder']) . '/' . $i . '.jpg' . 
 						(DEFAULT_MODE === 'develop' ? '?' . filemtime($file) : null) . 
 						'" alt="' . $preg . '" title="' . $preg . '"' . 
 						(!empty($class) ? ' class="' . $class . '"' : null) . 

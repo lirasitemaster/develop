@@ -93,7 +93,7 @@ foreach ($places as $place) {
 					$prefix = '?' . filemtime(PATH_ASSETS . 'scss' . DS . $item . '.css');
 				}
 			}
-			$print .= $link['css'][0] . $uri -> site . URL_ASSETS . 'scss/' . $item . '.css' . $prefix . $link['css'][1];
+			$print .= $link['css'][0] . URL_ASSETS . 'scss/' . $item . '.css' . $prefix . $link['css'][1];
 		}
 		
 		unset($item, $result);
@@ -116,7 +116,7 @@ if (DEFAULT_MODE === 'develop') {
 }
 
 if ($result && file_exists(PATH_ASSETS . 'scss' . DS . 'inner' . DS . $inner . '.css')) {
-	$print .= $link['css'][0] . $uri -> site . URL_ASSETS . 'scss/inner/' . $inner . '.css' . $prefix . $link['css'][1];
+	$print .= $link['css'][0] . URL_ASSETS . 'scss/inner/' . $inner . '.css' . $prefix . $link['css'][1];
 }
 
 echo $print;

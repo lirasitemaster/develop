@@ -71,7 +71,7 @@ foreach (['splashscreen', 'webapp'] as $key) {
 		foreach ($icons[$key]['sizes'] as $item) {
 			$item = strpos($item, ':') !== false ? str_replace(':', 'x', $item) : $item . 'x' . $item;
 			$json['icons'][] = [
-				'src' => '/' . URL_LOCAL . $icons['settings']['path'] . '/' . $icons[$key]['name'] . '-' . $item . '.png',
+				'src' => URL_LOCAL . $icons['settings']['path'] . '/' . $icons[$key]['name'] . '-' . $item . '.png',
 				'type' => 'image/png',
 				'sizes' => $item
 			];

@@ -64,8 +64,8 @@ $addmodule -> settings['classes'] = [
 	</div>
 	<?php
 		if (!empty($module -> settings['offcanvas']['wrappers'])) {
-			if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_before.php')) {
-				require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_before.php';
+			if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_before.php')) {
+				require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_before.php';
 			} else {
 				require $module -> elements . 'wrapper_before.php';
 			}
@@ -79,8 +79,8 @@ $addmodule -> settings['classes'] = [
 	</ul>
 	<?php
 		if (!empty($module -> settings['offcanvas']['wrappers'])) {
-			if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_after.php')) {
-				require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_after.php';
+			if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_after.php')) {
+				require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_wrapper_after.php';
 			} else {
 				require $module -> elements . 'wrapper_after.php';
 			}

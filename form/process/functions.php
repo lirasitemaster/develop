@@ -156,13 +156,13 @@ if (!function_exists('moduleFormGenerate')) {
 		//возможно, введение namespaces исправит эту ситуацию
 		
 		//echo '[' . print_r($module -> path, 1) . ']<br>';
-		//echo '[' . print_r(PATH_ASSETS . 'modules' . DS . $module -> name, 1) . ']<br>';
+		//echo '[' . print_r(PATH_CUSTOM . 'modules' . DS . $module -> name, 1) . ']<br>';
 		
 		$item = $module -> settings['form'];
 		$item = $item[$target];
 		
-		if (file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_field.php')) {
-			require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> param . '_field.php';
+		if (file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_field.php')) {
+			require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> param . '_field.php';
 		} else {
 			require $module -> elements . 'field.php';
 		}

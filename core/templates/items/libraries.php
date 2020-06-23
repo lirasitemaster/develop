@@ -48,7 +48,7 @@ foreach ($libraries as $item) {
 				if (!$cdn && file_exists(PATH_LIBRARIES . datapath($s))) {
 					$str = $s;
 				}
-				$s = $link[$k][0] . (!$cdn ? $uri -> site . URL_LIBRARIES : null) . $str . (!$cdn ? $prefix : null) . $link[$k][1];
+				$s = $link[$k][0] . (!$cdn ? URL_LIBRARIES : null) . $str . (!$cdn ? $prefix : null) . $link[$k][1];
 				
 				if (in('options', 'sortinghead')) {
 					$sorting[$k] .= $s;

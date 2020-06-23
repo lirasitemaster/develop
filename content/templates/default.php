@@ -8,8 +8,8 @@ global $uri;
 global $lang;
 
 $path = (object) [
-	'current' => PATH_ASSETS . 'content' . DS . 'templates' . DS . (!empty($module -> param) && $module -> param !== 'default' && file_exists(PATH_ASSETS . 'content' . DS . 'templates' . DS . $module -> param . DS) ? $module -> param : $module -> data['content']['parent']) . DS,
-	'local' => $uri -> site . URL_LOCAL,
+	'current' => PATH_CUSTOM . 'content' . DS . 'templates' . DS . (!empty($module -> param) && $module -> param !== 'default' && file_exists(PATH_CUSTOM . 'content' . DS . 'templates' . DS . $module -> param . DS) ? $module -> param : $module -> data['content']['parent']) . DS,
+	'local' => URL_LOCAL,
 	'previous' => $uri -> site . $uri -> path -> base . $uri -> path -> string,
 	'parent' => null,
 	'item' => null

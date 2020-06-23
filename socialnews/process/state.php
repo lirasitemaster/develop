@@ -1,6 +1,6 @@
 <?php defined('isENGINE') or die;
 
-$folder = PATH_ASSETS . 'modules' . DS . $module -> name . DS . 'temporary' . DS;
+$folder = PATH_CUSTOM . 'modules' . DS . $module -> name . DS . 'temporary' . DS;
 $file = $folder . datadatetime('', $module -> settings['savestate']) . '.' . $module -> param . '.ini';
 
 if (!empty($module -> settings['savestate']) && file_exists($file)) {
@@ -39,9 +39,9 @@ if (!empty($module -> settings['savestate']) && file_exists($file)) {
 	}
 	
 	if (!empty($result) && !empty($module -> settings['savestate'])) {
-		if (!file_exists(PATH_ASSETS . 'modules')) { mkdir(PATH_ASSETS . 'modules'); }
-		if (!file_exists(PATH_ASSETS . 'modules' . DS . $module -> name)) { mkdir(PATH_ASSETS . 'modules' . DS . $module -> name); }
-		if (!file_exists(PATH_ASSETS . 'modules' . DS . $module -> name . DS . 'temporary')) { mkdir(PATH_ASSETS . 'modules' . DS . $module -> name . DS . 'temporary'); }
+		if (!file_exists(PATH_CUSTOM . 'modules')) { mkdir(PATH_CUSTOM . 'modules'); }
+		if (!file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name)) { mkdir(PATH_CUSTOM . 'modules' . DS . $module -> name); }
+		if (!file_exists(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . 'temporary')) { mkdir(PATH_CUSTOM . 'modules' . DS . $module -> name . DS . 'temporary'); }
 		
 		$list = localList($folder, ['return' => 'files', 'mask' => $module -> param]);
 		if (objectIs($list)) {

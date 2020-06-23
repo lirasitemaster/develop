@@ -398,7 +398,7 @@ foreach ($libraries -> empty as $key => $item) {
 			} else {
 				
 				$data = null;
-				$ini = PATH_ASSETS . 'libraries' . DS . $item[0] . '.' . $item[1] . '.ini';
+				$ini = PATH_CUSTOM . 'libraries' . DS . $item[0] . '.' . $item[1] . '.ini';
 				
 				if (!file_exists($ini)) {
 					logging('library \'' . $item[0] . '\' by \'' . $item[1] . '\' not found json files in installed folder and was be tried take defaults from system install folder', 'composer - library \'' . $item[0] . '\' by \'' . $item[1] . '\' not found json');

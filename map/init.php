@@ -49,7 +49,7 @@ if (is_string($module -> settings['marks'])) {
 function createmapmark($item) {
 	
 	$image = (object) array(
-		'url' => '/' . URL_LOCAL . $item,
+		'url' => URL_LOCAL . $item,
 		'php' => PATH_LOCAL . $item,
 		'data' => '',
 		'type' => '',

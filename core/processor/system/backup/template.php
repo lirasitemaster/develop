@@ -21,11 +21,26 @@ foreach ($list as $item) {
 }
 unset($item, $list, $subitem, $itemlist);
 
+// кастомные
+
+$list = localList(PATH_CUSTOM, ['return' => 'folders', 'skip' => 'content:core:modules:' . NAME_TEMPLATES]);
+foreach ($list as $item) {
+	
+	$itemlist = localList(PATH_CUSTOM . $item, ['return' => 'folders']);
+	foreach ($itemlist as $subitem) {
+		if (strpos($subitem, $templ) === 0) {
+			$folders[] = PATH_CUSTOM . $item . $subitem;
+		}
+	}
+	
+}
+unset($item, $list, $subitem, $itemlist);
+
 // модули
 
-$list = localList(PATH_ASSETS . 'modules' . DS, ['return' => 'files', 'subfolders' => true, 'mask' => $templ . '.php']);
+$list = localList(PATH_CUSTOM . 'modules' . DS, ['return' => 'files', 'subfolders' => true, 'mask' => $templ . '.php']);
 foreach ($list as $item) {
-	$files[] = PATH_ASSETS . 'modules' . DS . $item . $subitem;
+	$files[] = PATH_CUSTOM . 'modules' . DS . $item . $subitem;
 }
 unset($item, $list, $subitem, $itemlist);
 

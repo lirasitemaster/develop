@@ -14,6 +14,14 @@ foreach ($list as $item) {
 }
 unset($item, $list);
 
+// кастомные
+
+$list = localList(PATH_CUSTOM, ['return' => 'folders', 'skip' => NAME_TEMPLATES]);
+foreach ($list as $item) {
+	$folders[] = PATH_CUSTOM . $item;
+}
+unset($item, $list);
+
 // шаблоны
 
 $list = localList(PATH_TEMPLATES, ['return' => 'folders', 'skip' => 'administrator:base:error:restore']);

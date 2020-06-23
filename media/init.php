@@ -240,7 +240,7 @@ if (empty($sets['folder'])) {
 
 $init = [
 	'path' => PATH_LOCAL . datapath($sets['folder'], false, 'parse') . DS,
-	'url' => '/' . URL_LOCAL . datapath($sets['folder'], true, 'parse') . '/',
+	'url' => URL_LOCAL . datapath($sets['folder'], true, 'parse') . '/',
 	'list' => objectIs($sets['list']) ? $sets['list'] : null,
 	'captions' => null
 ];

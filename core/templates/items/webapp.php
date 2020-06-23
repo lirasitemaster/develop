@@ -22,7 +22,7 @@ $webapp = &$template -> settings -> webapp;
 <?php
 	
 	$icons = dbUse('icons', 'select', true);
-	$path = '/' . URL_LOCAL . $icons['settings']['path'] . '/';
+	$path = URL_LOCAL . $icons['settings']['path'] . '/';
 	$print = null;
 	
 	$item = [

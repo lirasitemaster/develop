@@ -40,7 +40,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 					$item = $size[0] . 'x' . $size[1];
 					$tag = $item === '144x144' ? true : false;
 					$type = $size[1] === $size[0] ? 'square' : 'wide';
-					$path = '/' . URL_LOCAL . $icons['settings']['path'] . '/' . $icons['msapplication']['name'] . '-' . $item . '.png';
+					$path = URL_LOCAL . $icons['settings']['path'] . '/' . $icons['msapplication']['name'] . '-' . $item . '.png';
 			?>
 			<<?= $tag ? 'TileImage' : $type . $item . 'logo'; ?> src="<?= $path; ?>" />
 			<?php

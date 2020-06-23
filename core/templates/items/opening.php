@@ -25,6 +25,7 @@ global $seo;
 		
 		if (
 			in('libraries', 'less') ||
+			in('libraries', 'less.php:wikimedia') ||
 			in('libraries', 'lessjs:system')
 		) {
 			page('less', 'item');

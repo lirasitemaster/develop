@@ -45,7 +45,7 @@ $parent = $target[1];
 				<?= $i; ?>
 			</td>
 			<td class="order-list-item order-list-item__image">
-				<img class="order-list-item__image--src" alt="<?= $data['title']; ?>" src="/<?= URL_LOCAL . $parent . '/' . $item['name']; ?>.jpg" />
+				<img class="order-list-item__image--src" alt="<?= $data['title']; ?>" src="<?= URL_LOCAL . $parent . '/' . $item['name']; ?>.jpg" />
 			</td>
 			<td class="order-list-item order-list-item__info">
 				<a href="/<?= $parent . '/' . $item['name']; ?>/">

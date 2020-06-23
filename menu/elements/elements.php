@@ -21,7 +21,7 @@
 			
 			<img
 				src="<?php
-					echo $url -> site . URL_LOCAL . 'logo.';
+					echo URL_LOCAL . 'logo.';
 					if (file_exists(PATH_LOCAL . 'logo.svg')) { echo 'svg'; }
 					elseif (file_exists(PATH_LOCAL . 'logo.png')) { echo 'png'; }
 					else { echo 'jpg'; }

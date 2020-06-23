@@ -5,7 +5,7 @@ global $uri;
 $print = "\r\n\r\n" . '<!-- FAVICONS -->' . "\r\n\r\n";
 
 $icons = dbUse('icons', 'select', true);
-$path = '/' . URL_LOCAL . $icons['settings']['path'] . '/';
+$path = URL_LOCAL . $icons['settings']['path'] . '/';
 
 if (!empty($icons['favicon'])) {
 	$print .= '<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="' . (empty($icons['favicon']['rootfolder']) ? $path : '/') . (empty($icons['favicon']['name']) ? 'favicon' : $icons['favicon']['name']) . '.ico">';

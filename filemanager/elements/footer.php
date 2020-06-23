@@ -23,7 +23,7 @@
         });
     });
     //TFM Config
-    window.curi = "<?= $uri -> site . URL_MODULES . 'isengine/filemanager/elements/config.json'; ?>", window.config = null;
+    window.curi = "<?= URL_MODULES . 'isengine/filemanager/elements/config.json'; ?>", window.config = null;
     function fm_get_config(){ if(!!window.name){ window.config = JSON.parse(window.name); } else { $.getJSON(window.curi).done(function(c) { if(!!c) { window.name = JSON.stringify(c), window.config = c; } }); }}
     function template(html,options){
         var re=/<\%([^\%>]+)?\%>/g,reExp=/(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g,code='var r=[];\n',cursor=0,match;var add=function(line,js){js?(code+=line.match(reExp)?line+'\n':'r.push('+line+');\n'):(code+=line!=''?'r.push("'+line.replace(/"/g,'\\"')+'");\n':'');return add}

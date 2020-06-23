@@ -26,7 +26,7 @@ function page($name, $target = false, $once = true){
 	} elseif ($target === 'template') {
 		$name = PATH_TEMPLATES . $template -> name . DS . 'html' . DS . $name;
 	} elseif ($target === 'item') {
-		$name = file_exists(PATH_ASSETS . 'items' . DS . $name . '.php') ? PATH_ASSETS . 'items' . DS . $name : PATH_CORE . 'templates' . DS . 'items' . DS . $name;
+		$name = file_exists(PATH_CUSTOM . 'items' . DS . $name . '.php') ? PATH_CUSTOM . 'items' . DS . $name : PATH_CORE . 'templates' . DS . 'items' . DS . $name;
 	} else {
 		return false;
 	}
@@ -387,7 +387,7 @@ function module($arr, $special = null){
 		if (
 			$arr[1] !== 'default' && (
 				file_exists($arr[4] . $arr[0] . DS . 'templates' . DS . $arr[1] . '.php') ||
-				file_exists(PATH_ASSETS . 'modules' . DS . $arr[0] . DS . $arr[1] . '.php')
+				file_exists(PATH_CUSTOM . 'modules' . DS . $arr[0] . DS . $arr[1] . '.php')
 			)
 		) {
 			$arr[2] = $arr[1];
@@ -404,7 +404,7 @@ function module($arr, $special = null){
 		'name' => $arr[0],
 		'param' => $arr[1],
 		'template' => $arr[2],
-		'cpath' => file_exists(PATH_ASSETS . 'modules' . DS . $arr[0] . DS) && is_dir(PATH_ASSETS . 'modules' . DS . $arr[0] . DS) ? PATH_ASSETS . 'modules' . DS . $arr[0] . DS : null,
+		'cpath' => file_exists(PATH_CUSTOM . 'modules' . DS . $arr[0] . DS) && is_dir(PATH_CUSTOM . 'modules' . DS . $arr[0] . DS) ? PATH_CUSTOM . 'modules' . DS . $arr[0] . DS : null,
 		'path' => $arr[4] . $arr[0] . DS,
 		'elements' => $arr[4] . $arr[0] . DS . 'elements' . DS,
 		'process' => $arr[4] . $arr[0] . DS . 'process' . DS,
@@ -499,7 +499,7 @@ function module($arr, $special = null){
 	
 	// готовим пути
 	
-	$module -> tpath = PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> template . '.php';
+	$module -> tpath = PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> template . '.php';
 	if (!file_exists($module -> tpath)) {
 		$module -> from .= ':module';
 		$module -> tpath = $module -> path . 'templates' . DS . $module -> template . '.php';

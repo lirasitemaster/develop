@@ -144,7 +144,7 @@ unset($item);
 // сюда нужно добавить вызов дополнительного обработчика
 
 if (!empty($module -> settings['customprocess'])) {
-	require PATH_ASSETS . 'send' . DS . 'process' . DS . ($module -> settings['customprocess'] === true ? 'default' : str_replace(':', DS, $module -> settings['customprocess'])) . DS . 'init.php';
+	require PATH_CUSTOM . 'send' . DS . 'process' . DS . ($module -> settings['customprocess'] === true ? 'default' : str_replace(':', DS, $module -> settings['customprocess'])) . DS . 'init.php';
 }
 
 // а здесь проверка ошибок и присвоение статуса

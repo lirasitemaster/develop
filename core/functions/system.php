@@ -11,8 +11,8 @@ set			< dataset - Функция которая проверяет, устано
 function init($folder, $name) {
 	
 	if ($folder === 'custom') {
-		if (file_exists(PATH_ASSETS . $name . '.php')) {
-			require_once PATH_ASSETS . $name . '.php';
+		if (file_exists(PATH_CUSTOM . $name . '.php')) {
+			require_once PATH_CUSTOM . $name . '.php';
 			return true;
 		} else {
 			return false;
@@ -945,7 +945,7 @@ function send($arr, $message, $subject = null, $data = [], $clear = null) {
 		// проверка на наличие шаблона
 		
 		if (!empty($arr -> template)) {
-			$template = PATH_ASSETS . 'send' . DS . 'templates' . DS . $arr -> template . '.php';
+			$template = PATH_CUSTOM . 'send' . DS . 'templates' . DS . $arr -> template . '.php';
 		}
 		
 		if (file_exists($template)) {

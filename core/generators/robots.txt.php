@@ -16,15 +16,21 @@ if (defined('DEFAULT_NOINDEX') && constant('DEFAULT_NOINDEX')) {
 	if (!empty($configuration['name'])) {
 		$configuration = array_keys($configuration['name']);
 	} else {
-		$configuration = ['assets', 'cache', 'core', 'libraries', 'log', 'modules', 'templates'];
+		$configuration = ['assets', 'cache', 'core', 'custom', 'libraries', 'log', 'modules', 'templates'];
 	}
 	
 	$array = [];
 	
 	foreach ($configuration as $item) {
 		$item = 'URL_' . strtoupper($item);
-		if (defined($item) && constant($item) && constant($item) !== '/' && !in_array(constant($item), $array)) {
-			$array[] = constant($item);
+		$item = defined($item) ? substr(constant($item), 1) : null;
+		if (
+			!empty($item) &&
+			$item !== '/' &&
+			strpos($item, '//') === false &&
+			!in_array($item, $array)
+		) {
+			$array[] = $item;
 		}
 	}
 	unset($item, $configuration);
@@ -58,9 +64,15 @@ if (defined('DEFAULT_NOINDEX') && constant('DEFAULT_NOINDEX')) {
 	}
 	unset($item, $array);
 	
-	$robots .= "Disallow: /.*/\r\n";
-	if (defined('URL_LOCAL') && constant('URL_LOCAL') && constant('URL_LOCAL') !== '/') {
-		$robots .= "Allow: /" . URL_LOCAL . "\r\n";
+	$robots .= "Disallow: /cgi-bin\r\nDisallow: /.*/\r\nDisallow: *?\r\n";
+	
+	if (
+		defined('URL_LOCAL') &&
+		constant('URL_LOCAL') &&
+		constant('URL_LOCAL') !== '/' &&
+		strpos(constant('URL_LOCAL'), '//') === false
+	) {
+		$robots .= "Allow: " . URL_LOCAL . "\r\n";
 	}
 	
 }

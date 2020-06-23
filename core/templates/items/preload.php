@@ -19,7 +19,7 @@ foreach ($libraries as $item) {
 	if (objectIs($item['data']['preload'])) {
 		foreach ($item['data']['preload'] as $i) {
 			$i = dataParse($i);
-			$print .= $link['preload'][0] . (!$cdn ? $uri -> site . URL_LIBRARIES : null) . $i[0] . $link['preload'][1] . (!empty($i[1]) ? $link['preload'][3] . $i[1] . $link['preload'][4] . ($i[1] === 'font' ? $link['preload'][5] : null) : null) . $link['preload'][2];
+			$print .= $link['preload'][0] . (!$cdn ? URL_LIBRARIES : null) . $i[0] . $link['preload'][1] . (!empty($i[1]) ? $link['preload'][3] . $i[1] . $link['preload'][4] . ($i[1] === 'font' ? $link['preload'][5] : null) : null) . $link['preload'][2];
 		}
 		unset($i);
 	}
@@ -31,7 +31,7 @@ foreach ($template -> settings -> assets as $item) {
 	if (objectIs($item['preload'])) {
 		foreach ($item['preload'] as $i) {
 			$i = dataParse($i);
-			$print .= $link['preload'][0] . $uri -> site . URL_ASSETS . $i[0] . $link['preload'][1] . (!empty($i[1]) ? $link['preload'][3] . $i[1] . $link['preload'][4] . ($i[1] === 'font' ? $link['preload'][5] : null) : null) . $link['preload'][2];
+			$print .= $link['preload'][0] . URL_ASSETS . $i[0] . $link['preload'][1] . (!empty($i[1]) ? $link['preload'][3] . $i[1] . $link['preload'][4] . ($i[1] === 'font' ? $link['preload'][5] : null) : null) . $link['preload'][2];
 		}
 		unset($i);
 	}

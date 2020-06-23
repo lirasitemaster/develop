@@ -12,7 +12,7 @@ global $process;
 if (strpos($process -> set -> type, 'module') !== false) {
 	$process -> set -> path = PATH_MODULES . $process -> set -> vendor . DS . $process -> set -> parent . DS . 'processor' . DS;
 } elseif ($process -> set -> type === 'custom') {
-	$process -> set -> path = DEFAULT_CUSTOM ? PATH_ASSETS . 'core' . DS . 'processor' . DS . $process -> set -> parent . DS : null;
+	$process -> set -> path = DEFAULT_CUSTOM ? PATH_CUSTOM . 'core' . DS . 'processor' . DS . $process -> set -> parent . DS : null;
 } else {
 	$process -> set -> path = PATH_CORE . 'processor' . DS . $process -> set -> parent . DS;
 }
@@ -23,7 +23,7 @@ switch($process -> set -> type) {
 		$process -> set -> path = PATH_MODULES . $process -> set -> vendor . DS . $process -> set -> parent . DS . 'processor' . DS;
 		break;
 	case 'custom':
-		$process -> set -> path = DEFAULT_CUSTOM ? PATH_ASSETS . 'core' . DS . 'processor' . DS . $process -> set -> parent . DS : null;
+		$process -> set -> path = DEFAULT_CUSTOM ? PATH_CUSTOM . 'core' . DS . 'processor' . DS . $process -> set -> parent . DS : null;
 		break;
 	default:
 		$process -> set -> path = PATH_CORE . 'processor' . DS . $process -> set -> parent . DS;

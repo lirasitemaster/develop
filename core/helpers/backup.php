@@ -10,6 +10,7 @@ $nolocal = 0;
 
 $folders = [
 	PATH_ASSETS,
+	PATH_CUSTOM,
 	PATH_DATABASE
 ];
 

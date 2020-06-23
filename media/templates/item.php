@@ -112,7 +112,7 @@ if (empty($init['list'])) {
 
 <?php
 	if (!empty($sets['style'])) :
-	$file = PATH_ASSETS . 'modules' . DS . 'media' . DS . $module -> template . '.css';
+	$file = PATH_CUSTOM . 'modules' . DS . 'media' . DS . $module -> template . '.css';
 	if ($module -> template === 'item' && !file_exists($file)) {
 		$file = PATH_MODULES . $module -> name . DS . 'templates' . DS . 'item.css';
 	}

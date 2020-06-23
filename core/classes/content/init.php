@@ -734,7 +734,7 @@ class Content {
 				$item[1] = 'csv';
 			}
 			
-			$path = PATH_ASSETS . 'content' . DS . 'tables' . DS . $item[0] . '.' . $item[1];
+			$path = PATH_CUSTOM . 'content' . DS . 'tables' . DS . $item[0] . '.' . $item[1];
 			
 			if (!file_exists($path)) {
 				continue;
@@ -828,7 +828,7 @@ class Content {
 				continue;
 			}
 			
-			$path = PATH_ASSETS . 'content' . DS . 'local' . DS . $this -> parent . DS . $item['name'] . '.' . $key[0];
+			$path = PATH_CUSTOM . 'content' . DS . 'local' . DS . $this -> parent . DS . $item['name'] . '.' . $key[0];
 			
 			if (!empty($lang) && file_exists($path . '.' . $lang -> lang . '.ini')) {
 				$path .= '.' . $lang -> lang . '.ini';

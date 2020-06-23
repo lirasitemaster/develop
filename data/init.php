@@ -34,7 +34,7 @@ if (objectIs($data)) {
 			}
 			
 			if (!empty($module -> this)) {
-				require PATH_ASSETS . 'modules' . DS . $module -> name . DS . $module -> this . '.php';
+				require PATH_CUSTOM . 'modules' . DS . $module -> name . DS . $module -> this . '.php';
 			}
 			
 		}
