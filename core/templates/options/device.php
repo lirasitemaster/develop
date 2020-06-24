@@ -2,11 +2,18 @@
 
 global $template;
 
+/*
 if (cookie('device', true)) {
 	
 	$template -> device = json_decode(cookie('device', true));
 	
-} else {
+} else
+*/
+
+if (
+	in('libraries', 'mobiledetect:system') ||
+	in('libraries', 'Mobile-Detect:serbanghita')
+) {
 	
 	$template -> device = (object) [
 		'type' => null,
@@ -14,7 +21,6 @@ if (cookie('device', true)) {
 		'screen' => null
 	];
 	
-	require_once PATH_CORE . 'classes' . DS . 'mobiledetect' . DS . 'mobiledetectlib' . DS . 'Mobile_Detect.php';
 	$mobiledetect = new Mobile_Detect;
 	
 	$template -> device -> type = ($mobiledetect->isMobile() ? ($mobiledetect->isTablet() ? 'tablet' : 'mobile') : 'desktop');
@@ -29,7 +35,7 @@ if (cookie('device', true)) {
 	
 	unset($mobiledetect);
 	
-	cookie('device', json_encode($template -> device));
+	//cookie('device', json_encode($template -> device));
 	
 }
 
