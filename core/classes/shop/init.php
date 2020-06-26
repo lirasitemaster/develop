@@ -20,6 +20,7 @@ class Shop {
 	public $settings = null;
 	public $cart = null;
 	public $prices = null;
+	public $count = null;
 	
 	function __construct($name = null, $refresh = null) {
 		
@@ -82,6 +83,7 @@ class Shop {
 						if ($cart[$sku] > 0) {
 							$this -> order[$key] = $item;
 							$this -> prices['total'] += $price * $cart[$sku];
+							$this -> count += $cart[$sku];
 						} else {
 							unset(
 								$this -> order[$key],

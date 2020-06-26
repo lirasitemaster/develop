@@ -38,4 +38,35 @@ if (
 	
 }
 
+if (!empty($sets['return'])) {
+	
+	$return = preg_replace_callback('/\{(.*?)\}/ui', function($i) use ($shop) {
+		
+		$i = dataSplit($i[1], '.');
+		
+		$r = array_shift($i);
+		$r = $shop -> $r;
+		
+		if (objectIs($i)) {
+			foreach ($i as $ii) {
+				$r = objectIs($r) && !objectIs($ii) && array_key_exists($ii, $r) ? $r[$ii] : null;
+			}
+			unset($ii);
+		}
+		
+		unset($i);
+		return $r;
+		
+	}, $sets['return']);
+	
+	unset($module);
+	
+	$module = (object) [
+		'return' => $return
+	];
+	
+	unset($return);
+	
+}
+
 ?>

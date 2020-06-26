@@ -409,6 +409,7 @@ function module($arr, $special = null){
 		'elements' => $arr[4] . $arr[0] . DS . 'elements' . DS,
 		'process' => $arr[4] . $arr[0] . DS . 'process' . DS,
 		'this' => null,
+		'return' => null,
 		'settings' => null,
 		'from' => null,
 		'tpath' => null,
@@ -557,7 +558,12 @@ function module($arr, $special = null){
 	// загружаем пути
 	
 	require $module -> path . 'init.php';
-	require $module -> tpath;
+
+	// загружаем шаблон
+	
+	if (!empty($module -> tpath)) {
+		require $module -> tpath;
+	}
 	
 	// загружаем скрипты
 	
@@ -569,6 +575,8 @@ function module($arr, $special = null){
 	
 	if (isset($loadingLog)) { $loadingLog .= 'was opening complete\n'; }
 	
+	$return = !empty($module -> return) ? $module -> return : null;
+	
 	unset(
 		$module,
 		$sets,
@@ -578,6 +586,8 @@ function module($arr, $special = null){
 		$options,
 		$script
 	);
+	
+	return $return;
 	
 }
 
