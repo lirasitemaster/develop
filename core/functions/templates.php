@@ -490,6 +490,9 @@ function module($arr, $special = null){
 	if (empty($settings)) {
 		$module -> from = 'module';
 		$settings = localFile($module -> path . 'data' . DS . $module -> param . '.ini');
+		if (empty($settings)) {
+			$settings = localFile($module -> path . 'data' . DS . 'default.ini');
+		}
 		if (!empty($settings)) {
 			$settings = iniPrepareJson($settings, true);
 		}
