@@ -575,7 +575,7 @@ function module($arr, $special = null){
 	
 	if (isset($loadingLog)) { $loadingLog .= 'was opening complete\n'; }
 	
-	$return = !empty($module -> return) ? $module -> return : null;
+	$return = set($module -> return, true);
 	
 	unset(
 		$module,
