@@ -30,7 +30,17 @@ if ($template -> name === 'home') {
 } else
 */
 $home = null;
-if ($template -> page['type'] === 'home' && !empty($uri -> path -> array)) {
+
+if (
+	empty($template -> page) &&
+	!empty($template -> list -> router) &&
+	!empty($template -> list -> folders) &&
+	!in_array(end($template -> list -> router), $template -> list -> folders)
+) {
+	// условие, которое позволяет выдать ошибку без обработки
+	// надо тестировать
+	error('404', true, 'error 404 from router -- no page in structure');
+} elseif ($template -> page['type'] === 'home' && !empty($uri -> path -> array)) {
 	$home = $template -> page['home'];
 	unset($template -> page);
 } elseif (empty($template -> page['home'])) {

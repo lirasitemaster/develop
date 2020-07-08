@@ -194,6 +194,19 @@ function lang($name, $target = false){
 	// return - в случае неудачи возвращает запрошенное значение как есть, либо последний запрошенный элемент массива
 	// is - проверяет наличие запрошенного языкового элемента и отдает true/false
 	
+	/*
+	*  также теперь target поддерживает массив, где можно указать:
+	*    параметры преобразования
+	*      l - lowercase, все строчные буквы
+	*      u - uppercase, все заглавные буквы
+	*      c - case, первые буквы слов - заглавные
+	*      по-умолчанию все буквы - как есть
+	*    параметры морфера (падеж, число)
+	*    лимит строки в символах
+	*    параметры разбивки строки
+	*  на выходе отдает готовую строку
+	*/
+	
 	if (
 		empty($lang) ||
 		!objectIs($lang -> data) ||
@@ -239,6 +252,39 @@ function lang($name, $target = false){
 		return $result;
 	} elseif ($target === 'is') {
 		return set($result);
+	} elseif (objectIs($target)) {
+		
+		$convert = !empty($target[0]) ? $target[0] : null;
+		$morph = !empty($target[1]) ? $target[1] : null;
+		$limit = !empty($target[2]) ? $target[2] : null;
+		$split = !empty($target[3]) ? $target[3] : null;
+		
+		if ($morph) {
+			$result = datamorpher($result, $morph);
+		}
+		
+		if ($convert) {
+			if ($convert === 'l') {
+				$result = mb_convert_case($result, MB_CASE_LOWER);
+			} elseif ($convert === 'u') {
+				$result = mb_convert_case($result, MB_CASE_UPPER);
+			} elseif ($convert === 'c') {
+				$result = mb_convert_case($result, MB_CASE_TITLE);
+			} elseif ($convert === 't') {
+				$result = mb_convert_case(mb_substr($result, 0, 1), MB_CASE_UPPER) . mb_convert_case(mb_substr($result, 1), MB_CASE_LOWER);
+			}
+		}
+		
+		if ($limit) {
+			$result = mb_substr($result, 0, $limit);
+		}
+		
+		if ($split) {
+			$result = objectToString($result, !empty($split) ? $split : (!empty($lang -> data['counter']['split']) ? $lang -> data['counter']['split'] : ' '));
+		}
+		
+		return $result;
+		
 	}
 	
 }

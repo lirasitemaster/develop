@@ -134,6 +134,15 @@ if ($uri -> target !== false) {
 	) {
 		error('404', false);
 	} elseif (
+		$uri -> target === 'htm' || $uri -> target === 'html' &&
+		DEFAULT_PAGE === true
+	) {
+		$file = substr($uri -> path -> file, 0, -1 - strlen($uri -> target));
+		$uri -> path -> string .= $file . '/';
+		$uri -> path -> array[] = $file;
+		$uri -> path -> file = null;
+		unset($file);
+	} elseif (
 		$uri -> target === 'htm' ||
 		$uri -> target === 'html' ||
 		$uri -> target === 'xml' ||
